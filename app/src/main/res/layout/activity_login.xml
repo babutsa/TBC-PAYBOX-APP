@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/include2"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_semi_transparent"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="25dp"
+        android:layout_alignTop="@+id/include2"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:src="@drawable/tbc_pay_logo"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/edit_text_white"
+                android:hint="@string/username"
+                android:paddingLeft="35dp"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:layout_marginBottom="5dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/user_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/email_text"
+                android:layout_marginLeft="5dp"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#d7d7d7"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txt_passwd"
+                android:layout_toRightOf="@+id/txt_passwd"
+                android:ems="10"
+                android:background="@drawable/edit_text_white"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:maxLines="1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/txt_passwd"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/password_icon"
+                android:layout_alignTop="@+id/password_text"
+                android:layout_alignBottom="@+id/password_text"
+                android:layout_marginLeft="5dp"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_method_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_white"
+            android:onClick="startLogin"
+            android:text="@string/login"
+            android:textColor="@color/dark_red"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
